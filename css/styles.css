@@ -16,12 +16,14 @@ h1, h2, h3, h4, h5, h6, p, ul {
     --primary-text-color: #212121;
     --second-text-color: #757575;
     --light-text-color: #FFFFFF;
+    --dark: #000000;
     --footer-contacts-color: rgba(255, 255, 255, .6);
 }
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    color: #212121;
+    color: var(--primary-text-color);
+    letter-spacing: 0.03em;
     /* padding-top: 80px; */
 }
 .backdrop {
@@ -100,12 +102,12 @@ body {
     display: block;
 }
 .logo-dark {
-    color: #000000;
+    color: var(--dark);
 
 }
 .logo-light {
     display: flex;
-    color: #ffffff ;
+    color: var(--light-text-color) ;
     margin-bottom: 20px;
 }
 .title-two {
@@ -135,7 +137,7 @@ body {
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
-    letter-spacing: 0.03em;
+    
     margin-right: 50px;
 }
 .web {
@@ -179,6 +181,20 @@ body {
 }
 .nav-link:hover, .nav-link:focus {
     color: var(--accent-color);
+}
+.current {
+    position: relative;
+}
+.current::after {
+    display: block;
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 44px;
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
 }
 .nav-list.nav-item:not(:last-child) {
     margin-right: 50px;
@@ -260,7 +276,7 @@ body {
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: var(--light-text-color);
     margin-bottom: 30px;
     
 }
@@ -272,7 +288,7 @@ body {
     align-items: center;
     
     letter-spacing: 0.06em;
-    color: #FFFFFF;
+    color: var(--light-text-color);
     background-color: var(--accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
@@ -344,7 +360,7 @@ body {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
-    letter-spacing: 0.03em;
+    
     text-transform: uppercase;
     color: var(--primary-text-color);
     margin-bottom: 10px;
@@ -352,7 +368,7 @@ body {
 .heading-text {
     font-size: 14px;
     line-height: 1.71;
-    letter-spacing: 0.03em;
+    
     color: var(--second-text-color);
 }
 /* ---------galary--------- */
@@ -361,7 +377,7 @@ body {
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
-    letter-spacing: 0.03em;
+    
     color: var(--primary-text-color);
     margin-bottom: 50px;
 }
@@ -406,7 +422,7 @@ body {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
-    letter-spacing: 0.03em;
+    
     text-transform: uppercase;
     color: var(--light-text-color);
     
@@ -432,14 +448,14 @@ body {
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
-    letter-spacing: 0.03em;
+    
     color: var(--primary-text-color);
     margin-bottom: 50px;
 }
 .team-item {
     width: 270px;
     
-    background: #FFFFFF;
+    background-color: var(--light-text-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
     
@@ -453,7 +469,7 @@ body {
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
-    letter-spacing: 0.03em;
+    
     color: var(--primary-text-color);
     margin-bottom: 10px;
 }
@@ -462,7 +478,7 @@ body {
     padding-bottom: 16px;
     line-height: 1.19;
     text-align: center;
-    letter-spacing: 0.03em;
+    
     color: var(--second-text-color);
     
 }
@@ -522,7 +538,7 @@ body {
     font-size: 36px;
     line-height: 42px;
     text-align: center;
-    letter-spacing: 0.03em;
+    
     color: var(--primary-text-color);
     margin-bottom: 50px;
 }
@@ -582,13 +598,13 @@ body {
 .footer-link-maps {
     font-size: 14px;
     line-height: 1.71;
-    letter-spacing: 0.03em;
-    color: #FFFFFF;
+    
+    color: var(--light-text-color);
 }
 .footer-link {
     font-size: 14px;
     line-height: 1.71;
-    letter-spacing: 0.03em;
+    
     color: rgba(255, 255, 255, 0.6);;
 }
 .footer-box-contact {
@@ -601,7 +617,7 @@ body {
     line-height: 16px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: var(--light-text-color);
     margin-bottom: 20px;
 }
 
@@ -645,7 +661,7 @@ body {
     font-size: 16px;
     line-height: 1.62;
     text-align: center;
-    letter-spacing: 0.03em;
+    
     border-radius: 4px;
     border: none;
     color: var(--primary-text-color);
@@ -662,7 +678,7 @@ body {
     margin-right: 8px;
 }
 .project-button:hover, .project-button:focus {
-    color: #ffffff;
+    color: var(--light-text-color);
     background-color: var(--accent-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -676,7 +692,7 @@ body {
 .project-box {
     width: 370px;
     padding-bottom: 20px;
-    background: #FFFFFF;
+    background-color: var(--light-text-color);
     border: 1px solid #EEEEEE;
     box-sizing: border-box;
     
@@ -724,7 +740,7 @@ body {
     padding: 63px 24px;
     font-size: 18px;
     line-height: 1.56;
-    letter-spacing: 0.03em;
+    
     color: var(--light-text-color);
     transition-property: opacity;
     transition-duration: 250ms;
@@ -752,7 +768,7 @@ body {
 .project-about {
     font-size: 16px;
     line-height: 1.87;
-    letter-spacing: 0.03em;
+    
     color: var(--second-text-color);
     
 }
